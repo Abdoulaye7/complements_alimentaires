@@ -23,3 +23,4 @@ function imprimerNomsComplementsIterable(it){
     }
 
 }
+export {complementsPremiersPrixPour,siropSontPremierPrix,nomsComplementsPour,imprimerNomsComplementsIterable,imprimerNomsComplementsIterateur}
