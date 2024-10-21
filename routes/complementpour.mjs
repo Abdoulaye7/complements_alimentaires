@@ -1,6 +1,6 @@
 
 
-import {express} from 'express';
+import express from 'express';
 
 
 
@@ -11,6 +11,15 @@ function recupererPrixMinimum(req,res,next){
         res.status(400).send('Mauvaise requête');
     }
     next();
+}
+function recupererIndication(req,res,next){
+    if(req.query.indication && typeof req.query.indication === 'string'){
+        res.locals.indication = req.query.indication;
+    }else{
+        res.status(400).send('Mauvaise requête');
+    }
+    next();
+
 }
 
 function recupererIndicationChemin(req,res,next){
